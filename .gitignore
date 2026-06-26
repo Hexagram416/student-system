@@ -1,0 +1,33 @@
+# Maven
+student-system-server/target/
+student-system-server/.mvn/wrapper/maven-wrapper.jar
+
+# Node
+student-system-client/node_modules/
+student-system-client/dist/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# H2 database files (local)
+*.mv.db
+*.trace.db
+
+# Logs
+*.log
+
+# Env
+.env
+
+# Maven distribution
+student-system-server/apache-maven-*/
+# MySQL local data
+mysql-data/
+# H2 data
+student-system-server/data/

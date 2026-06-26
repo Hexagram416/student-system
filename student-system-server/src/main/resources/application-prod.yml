@@ -1,0 +1,34 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  datasource:
+    # Default: H2 embedded (zero-dependency)
+    # Set DB_DRIVER=com.mysql.cj.jdbc.Driver to use MySQL
+    driver-class-name: ${DB_DRIVER:org.h2.Driver}
+    url: ${DB_URL:jdbc:h2:file:./data/student_system;MODE=MySQL;AUTO_SERVER=TRUE}
+    username: ${DB_USER:sa}
+    password: ${DB_PASS:}
+  h2:
+    console:
+      enabled: false
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:db/schema-h2.sql
+      data-locations: classpath:db/init_data.sql
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: auto
+
+jwt:
+  secret: ${JWT_SECRET:YmZTdWRlbnRTeXN0ZW1TZWNyZXRLZXlGb3JKV1RTaWduaW5nTWRTSEEyNTY=}
+  expiration: 86400000
+
+logging:
+  level:
+    com.studentsystem: info

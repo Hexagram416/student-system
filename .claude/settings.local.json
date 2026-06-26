@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(netstat -ano)",
+      "Bash(taskkill //pid 28040 //f)",
+      "Bash(taskkill //pid 2636 //f)",
+      "Bash(taskkill //pid 31636 //f)",
+      "Bash(npm run *)"
+    ]
+  }
+}
